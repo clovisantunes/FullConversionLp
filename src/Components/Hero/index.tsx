@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import heroImage from "../../assets/Hero.png";
+import heroImage from "../../assets/Hero.webp";
 import { motion } from "framer-motion";
 
 export default function Hero() {

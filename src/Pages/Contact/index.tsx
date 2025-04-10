@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import imgLogo from '../../assets/banner.png';
+import imgLogo from '../../assets/banner.webp';
 
 export default function Contact() {
   return (

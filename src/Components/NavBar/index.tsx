@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaInstagram } from 'react-icons/fa';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.webp';
 import styles from './styles.module.scss';
 
 type NavBarProps = {

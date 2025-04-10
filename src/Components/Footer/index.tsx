@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './styles.module.scss';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
-import logoimg from '../../assets/banner.png';
+import logoimg from '../../assets/banner.webp';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -37,10 +37,10 @@ export default function Footer() {
       <div className={styles.bottomSection}>
         <p>© {year} Clovis Antunes. Todos os direitos reservados.</p>
         <div className={styles.social}>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <a href="https://www.instagram.com/clovis_antuness/" target="_blank" rel="noreferrer">
             <FaInstagram />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/clovis-antunes/" target="_blank" rel="noreferrer">
             <FaLinkedin />
           </a>
         </div>

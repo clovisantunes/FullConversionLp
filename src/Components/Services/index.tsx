@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import web from '../../assets/webdesign.jpg';
-import support from '../../assets/suporte.jpg';
+import web from '../../assets/webdesign.webp';
+import support from '../../assets/suporte.webp';
 import { motion } from "framer-motion";
 
 type ServiceData = {

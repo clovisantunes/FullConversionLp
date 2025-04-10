@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import FinalCTA from "../../Components/CTA";
-import profileImage from "../../assets/clovis-dev.jpeg";
+import profileImage from "../../assets/clovis-dev.webp";
 
 const skills = [
   {
