@@ -1,0 +1,220 @@
+.contactSection {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #f7f9fc, #e2ecf6);
+  animation: fadeIn 1s ease;
+  color: #1e1e1e;
+  margin-top: 6em;
+
+  .container {
+    max-width: 1240px;
+    margin: auto;
+
+    .intro {
+      text-align: center;
+      margin-bottom: 4rem;
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #0a0a0a;
+      }
+
+      p {
+        font-size: 1.25rem;
+        color: #555;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+
+      .infoBox {
+        flex: 1;
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 2.5rem;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        animation: slideInLeft 0.8s ease;
+
+        h2 {
+          font-size: 1.8rem;
+          margin-bottom: 2rem;
+          color: #0a0a0a;
+        }
+
+        .infoItem {
+          display: flex;
+          align-items: center;
+          font-size: 1.1rem;
+          color: #333;
+          margin-bottom: 1.2rem;
+
+          .icon {
+            color: #e63946;
+            font-size: 1.3rem;
+            margin-right: 0.7rem;
+          }
+        }
+
+        .whatsButton {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.85rem 1.8rem;
+          background-color: #25d366;
+          color: #fff;
+          border-radius: 12px;
+          margin-top: 1.5rem;
+          font-weight: 600;
+          text-decoration: none;
+          font-size: 1rem;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: #1ebe5d;
+            transform: translateY(-2px);
+          }
+
+          .icon {
+            font-size: 1.2rem;
+          }
+        }
+
+        .illustration {
+          margin-top: 3rem;
+          width: 100%;
+          max-width: 480px;
+          max-height: 220px;
+          border-radius: 12px;
+          object-fit: cover;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .form {
+        flex: 1;
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 2.5rem;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        animation: slideInRight 0.8s ease;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          font-size: 1.8rem;
+          margin-bottom: 2rem;
+          color: #0a0a0a;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 1.1rem 1.2rem;
+          font-size: 1rem;
+          background: #f5f7fa;
+          border: 1px solid #d0d7e2;
+          border-radius: 12px;
+          color: #333;
+          margin-bottom: 1.5rem;
+          transition: border 0.3s ease, box-shadow 0.3s ease;
+          font-family: 'Inter', sans-serif;
+
+          &:focus {
+            border-color: #e63946;
+            box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.12);
+            outline: none;
+          }
+
+          &::placeholder {
+            color: #999;
+          }
+        }
+
+        textarea {
+          min-height: 140px;
+          resize: none;
+
+        }
+
+        button {
+          background-color: #e63946;
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    
+      &:hover {
+        background-color: #d62839;
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(230, 57, 70, 0.3);
+      }
+    
+      &:active {
+        transform: scale(0.97);
+      }
+    
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.15);
+        transform: skewX(-25deg);
+        transition: left 0.5s ease;
+      }
+    
+      &:hover::after {
+        left: 100%;
+      }
+    }
+  
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
