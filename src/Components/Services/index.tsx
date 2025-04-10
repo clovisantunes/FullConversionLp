@@ -64,7 +64,17 @@ export default function Services({ id }: ServiceData) {
                 <li key={index}>{topic}</li>
               ))}
             </ul>
-            <button className={styles.ctaButton}>{service.buttonText}</button>
+            <button className={styles.ctaButton}>
+            <a
+  href="https://wa.me/555181399275?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es!"
+  target="_blank"
+  rel="noopener noreferrer"
+  className={styles.ctaButton}
+>
+  {service.buttonText}
+</a>
+
+              </button>
           </div>
 
           <div className={styles.imageContainer}>

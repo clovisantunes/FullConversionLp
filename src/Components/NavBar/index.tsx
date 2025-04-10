@@ -68,7 +68,7 @@ export default function NavBar({ home, services, about, contact }: NavBarProps) 
         <a href={services} onClick={handleServicesClick}>Serviços</a>
         <Link to={contact}>Contato</Link>
         <a
-          href="https://instagram.com/seuusuario"
+          href="https://www.instagram.com/clovis_antuness/"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.instagramButton}
