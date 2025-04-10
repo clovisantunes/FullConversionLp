@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import styles from './styles.module.scss';
+import { Link, useLocation } from 'react-router-dom';
 import { FaInstagram } from 'react-icons/fa';
 import logo from '../../assets/logo.png';
+import styles from './styles.module.scss';
 
 type NavBarProps = {
   home: string;
@@ -10,10 +11,10 @@ type NavBarProps = {
   contact: string;
 }
 
-
 export default function NavBar({ home, services, about, contact }: NavBarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -33,14 +34,16 @@ export default function NavBar({ home, services, about, contact }: NavBarProps) 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const handleServicesClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
 
-  const handleServicesClick = () => {
-    if (window.location.pathname === "/") {
+    if (location.pathname === "/") {
       document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
     } else {
       window.location.href = "/#services";
     }
   };
+
   return (
     <div className={styles.navbarContainer}>
       <div className={styles.logo}>
@@ -60,10 +63,10 @@ export default function NavBar({ home, services, about, contact }: NavBarProps) 
       )}
 
       <div className={`${styles.navLinks} ${menuOpen ? styles.active : ''}`}>
-        <a href={home}>Início</a>
-        <a href={about}>Sobre</a>
+        <Link to={home}>Início</Link>
+        <Link to={about}>Sobre</Link>
         <a href={services} onClick={handleServicesClick}>Serviços</a>
-        <a href={contact}>Contato</a>
+        <Link to={contact}>Contato</Link>
         <a
           href="https://instagram.com/seuusuario"
           target="_blank"
