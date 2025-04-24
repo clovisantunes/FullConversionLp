@@ -4,6 +4,25 @@ import heroImage from "../../assets/Hero.webp";
 import { motion } from "framer-motion";
 
 export default function Hero() {
+  const handleWhatsAppClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    message: string
+  ) => {
+    e.preventDefault();
+  
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).dataLayer.push({
+      event: "lead_whatsapp",
+    });
+  
+    const encodedMessage = encodeURIComponent(message);
+  
+    setTimeout(() => {
+      window.open(`https://wa.me/555181399275?text=${encodedMessage}`, "_blank");
+    }, 300);
+  };
+  
+
   return (
     <section className={styles.hero}>
       <motion.div
@@ -22,23 +41,40 @@ export default function Hero() {
         </h2>
 
         <div className={styles.ctaSection}>
-          <motion.button
-            className={styles.ctaButton}
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.96 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <a
-              href="https://wa.me/555181399275?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.whatsappButton}
-            >
-              Fale conosco no WhatsApp
-            </a>
-          </motion.button>
-          <span className={styles.ctaNote}>Consultoria gratuita!</span>
-        </div>
+  <div className={styles.ctaButtonsGroup}>
+  <motion.a
+  href="https://wa.me/5551995930496"
+  className={styles.ctaButton}
+  whileHover={{ scale: 1.08 }}
+  whileTap={{ scale: 0.96 }}
+  transition={{ type: "spring", stiffness: 300 }}
+  onClick={(e) =>
+    handleWhatsAppClick(e, "Olá! Tenho interesse em um site profissional.")
+  }
+>
+  Quero um site profissional
+</motion.a>
+
+<motion.a
+  href="https://wa.me/5551995930496"
+  className={`${styles.ctaButton} ${styles.secondaryButton}`}
+  whileHover={{ scale: 1.08 }}
+  whileTap={{ scale: 0.96 }}
+  transition={{ type: "spring", stiffness: 300 }}
+  onClick={(e) =>
+    handleWhatsAppClick(
+      e,
+      "Olá! Preciso de suporte técnico, ou consultoria de TI."
+    )
+  }
+>
+  Preciso de suporte técnico
+</motion.a>
+  </div>
+
+  <span className={styles.ctaNote}>Consultoria gratuita!</span>
+</div>
+
       </motion.div>
 
       <motion.div

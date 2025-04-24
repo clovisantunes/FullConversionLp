@@ -30,7 +30,7 @@ export default function Footer() {
 
         <div className={styles.actions}>
           <h4>Fale conosco</h4>
-          <a href="https://wa.me/555181399275" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a href="https://wa.me/5551995930496" target="_blank" rel="noreferrer">WhatsApp</a>
         </div>
       </div>
 
