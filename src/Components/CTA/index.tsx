@@ -31,7 +31,7 @@ const FinalCTA: React.FC = () => {
     }
 
     window.open(
-      "https://wa.me/555181399275?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es!",
+      "https://wa.me/5551995930496?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es!",
       "_blank",
       "noopener,noreferrer"
     );

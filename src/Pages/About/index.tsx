@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import FinalCTA from "../../Components/CTA";
 import profileImage from "../../assets/clovis-dev.webp";
+import useScrollToTop from "../../Utils/ScrollToTop";
 
 const skills = [
   {
@@ -37,6 +38,7 @@ export default function About() {
   const toggleItem = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+  useScrollToTop();
 
   return (
     <section className={styles.aboutSection}>

@@ -103,7 +103,7 @@ export default function Services({ id }: ServiceData) {
     }
 
     window.open(
-      `https://wa.me/555181399275?text=${encodeURIComponent(service.whatsappMessage)}`,
+      `https://wa.me/5551995930496?text=${encodeURIComponent(service.whatsappMessage)}`,
       "_blank",
       "noopener,noreferrer"
     );

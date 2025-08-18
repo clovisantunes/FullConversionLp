@@ -3,12 +3,14 @@ import styles from "./styles.module.scss";
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import imgLogo from '../../assets/banner.webp';
 import emailjs from '@emailjs/browser';
+import useScrollToTop from "../../Utils/ScrollToTop";
 
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
+  useScrollToTop();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

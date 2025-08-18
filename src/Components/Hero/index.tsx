@@ -18,7 +18,7 @@ export default function Hero() {
     const encodedMessage = encodeURIComponent(message);
   
     setTimeout(() => {
-      window.open(`https://wa.me/555181399275?text=${encodedMessage}`, "_blank");
+      window.open(`https://wa.me/5551995930496?text=${encodedMessage}`, "_blank");
     }, 300);
   };
   

@@ -10,10 +10,14 @@ import FinalCTA from "./Components/CTA";
 import "./Styles/Globals.scss";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import useScrollToTop from "./Utils/ScrollToTop";
+
 
 export default function App() {
+
   return (
     <Router>
+      <ScrollToTopWrapper></ScrollToTopWrapper>
       <NavBar 
         home="/"
         about="/sobre"
@@ -40,4 +44,8 @@ export default function App() {
       <Footer />
     </Router>
   );
+}
+function ScrollToTopWrapper({ children }){
+  useScrollToTop();
+  return <>{children}</>;
 }
