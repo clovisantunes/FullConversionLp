@@ -11,9 +11,13 @@ import "./Styles/Globals.scss";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import useScrollToTop from "./Utils/ScrollToTop";
+import ProjectsSection from "./Components/Projects";
+import { projectsData } from "./Components/Projects/Data/projectsData";
 
 
 export default function App() {
+
+
 
   return (
     <Router>
@@ -21,6 +25,7 @@ export default function App() {
       <NavBar 
         home="/"
         about="/sobre"
+        
         contact="/contato"  
         services="#services"
       />
@@ -32,11 +37,13 @@ export default function App() {
               <Hero />
               <Why />
               <Services id="services" />
+               <ProjectsSection projects={projectsData} />
               <FAQSection />
               <FinalCTA />
             </>
           }
         />
+       
         <Route path="/sobre" element={<About />} />
         <Route path="/contato" element={<Contact />} />
       </Routes>
